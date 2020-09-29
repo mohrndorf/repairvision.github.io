@@ -2,8 +2,31 @@
 layout: page
 title:  "Evaluation"
 permalink: "/evaluation/"
-order: 4
+exclude: false
+order: 5
 ---
+
+{% capture folderpath %}{{ site.url }}/{{ page.path | remove: page.name }}{% endcapture %}
+
+#### Experimental Tool Configuration
+
+__Ecore Consistency Rules:__ [The constraints for Ecore which we have been defined and evaluated with ReVision can be found here.](/consistencyrules/)
+
+<figure class="aligncenter">
+	<a href="{{folderpath}}images/consistency-example-interface-constraint.png" target="_blank">
+	<img style="width: 400px" id="fig:consistency-example-interface-constraint" src="{{folderpath}}images/consistency-example-interface-constraint.png"/></a>
+</figure>
+
+__Ecore Edit Rules:__ [The consistency-preserving edit operations (CPEOs) which we have been defined and evaluated with ReVision can be found here.](/editrules/)
+
+<figure class="aligncenter">
+	<a href="{{folderpath}}images/2_1_constraint_wizard.png" target="_blank">
+	<img style="width: 550px" id="fig:consistency-example-interface-cpeo.png" src="{{folderpath}}images/consistency-example-interface-cpeo.png"/></a>
+</figure>
+
+__[All generated edit operations for Ecore can be browsed here](https://repairvision.github.io/_pages/editrules/ecore.html)__
+
+#### Evaluation Subject
 
 We evaluate our approach using real-world Ecore models from the Eclipse Git repositories. We extracted 28 model histories containing 638 resolved inconsistencies. These projects have a development time of more than a decade. The experimental data set can be found at [GitHub](https://github.com/repairvision/repairvision/tree/master/data.evaluation/org.eclipse.git_2018-08-22). The data set was processed in multiple steps:
 

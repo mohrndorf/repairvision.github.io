@@ -20,11 +20,13 @@
             <a href="{{ site.baseurl | prepend: site.url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
             {% assign sorted_pages = site.pages | sort:"order" %}
             {% for p in sorted_pages %}
+				{% unless p.exclude %}
                 {% if p.name == 'index.md' %}
                 {% if p.layout == 'page' %}
                     <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a>
                 {% endif %}
                 {% endif %}
+				{% endunless %}
             {% endfor %}
         </div>
         {% endif %}

@@ -1,8 +1,9 @@
 ---
 layout: page
-title:  "Publications"
+title:  "Publications and Literature"
 permalink: "/publications/"
-order: 7
+exclude: false
+order: 6
 ---
 
 {% capture folderpath %}{{ site.url }}/{{ page.path | remove: page.name }}{% endcapture %}
@@ -64,6 +65,10 @@ order: 7
 }
 
 </style>
+
+#### Repair Examples
+
+[Examples of model inconsistencies and their repairs collected from the literature.](/repairexamples/)
   
 #### ReVision: A Tool for History-Based Model Repair Recommendations
 
@@ -91,7 +96,7 @@ _Manuel Ohrndorf_
 <details>
 <summary><strong>Read Abstract:</strong></summary>
 <div class="dv"><p align="justify"> 
-In software development, models are used for system analysis and design. In model-driven software development, models are primary artifacts and the formalbasis for the system implementation. A model is an abstraction layer which conceals thetechnical target platform. This increases the reusability of the developed components.However, this requires the definition of a formal syntax and semantics for the modelinglanguage. Models are usually expressed from various viewpoints, e.g. the data structure and a user interaction. A multi-view modeling environment can be used to buildcomplex system models. A viewpoint can also be constructed by slicing a specific partof the model. This can be helpful in distributing and processing large models acrossa development team. However, a developer can inadvertently introduce inconsistenciesbetween different views. Ensuring the correctness of a model is a key task of the development process. Therefor, the developers need fully-fledged tool support to deal withinconsistencies.  This work presents an approach to the repair of inconsistencies in adistributed multi-view modeling environment. The introduced tool determines repairsbased on user-defined edit rules. To understand the cause of an inconsistency, the repairalgorithm considers the modifications which have introduced the inconsistency.
+In software development, models are used for system analysis and design. In model-driven software development, models are primary artifacts and the formal basis for the system implementation. A model is an abstraction layer which conceals the technical target platform. This increases the reusability of the developed components.However, this requires the definition of a formal syntax and semantics for the modeling language. Models are usually expressed from various viewpoints, e.g. the data structure and a user interaction. A multi-view modeling environment can be used to build complex system models. A viewpoint can also be constructed by slicing a specific part of the model. This can be helpful in distributing and processing large models across a development team. However, a developer can inadvertently introduce inconsistencies between different views. Ensuring the correctness of a model is a key task of the development process. Therefore, the developers need fully-fledged tool support to deal with inconsistencies.  This work presents an approach to the repair of inconsistencies in a distributed multi-view modeling environment. The introduced tool determines repairs based on user-defined edit rules. To understand the cause of an inconsistency, the repair algorithm considers the modifications which have introduced the inconsistency.
 </p></div>
 </details>
 
